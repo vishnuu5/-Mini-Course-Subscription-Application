@@ -17,15 +17,5 @@ export default defineConfig({
       },
     },
     target: "esnext",
-    minify: "terser",
-  },
-  experimental: {
-    renderBuiltUrl(filename, { hostType }) {
-      if (hostType === 'js') {
-        return { js: `/${filename}` };
-      } else {
-        return { relative: true };
-      }
-    },
   },
 });
